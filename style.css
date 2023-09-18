@@ -15,8 +15,8 @@ body {
 
 @media screen and (max-width: 1080px)
 .Header {
-  background-color: #fff;
-  z-index: 10;
+    background-color: #fff;
+    z-index: 10;
 }
 
 a {
