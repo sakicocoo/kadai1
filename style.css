@@ -1,3 +1,8 @@
+div {
+  margin:0;
+  padding:0;
+}
+
 body {
     color: #333;
     font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
@@ -9,19 +14,101 @@ body {
 .Header {
   padding-top: 20px;
   padding-bottom: 20px;
-  position: absolute;
   width: 100%;
+  position: absolute;
 }
 
-@media screen and (max-width: 1080px)
-.Header {
-    background-color: #fff;
-    z-index: 10;
+.HeaderNavHamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 21px;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger-line1 {
+    top:0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger-line2 {
+    top:50%;
+    position:absolute;
+    display: block;
+    width: 100%;
+    height:3px;
+    background-color: #333;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger-line3 {
+    top:100%;
+    position:absolute;
+    display: block;
+    width: 100%;
+    height:3px;
+    background-color: #333;
+    border-radius: 10px;
+  }
+}
+
+
+
+@media screen and (max-width: 1080px) {
+ .Header {
+  background-color: #fff;
+  z-index: 10;
+}
+}
+
+@media screen and (max-width:760px) {
+  .Header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width:760px) {
+  .Header-common {
+    position: fixed;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 a {
   color: #333;
   text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+  main {
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    padding-top: 52px;
+  }
 }
 
 .HeaderContainer {
@@ -56,12 +143,53 @@ a {
   color: #fff;
 }
 
+@media screen and (max-width: 1080px) {
+  .HeaderNavList {
+   overflow-y: scroll;
+   position: fixed;
+   top: 60px;
+   left: 100%;
+   width: 100%;
+   display: block;
+   padding-top: 20px;
+   padding-bottom: 75px;
+   transition: transform .5s;
+   z-index: 99;
+   background-color: rgba(0,0,0,.8);
+   height: 100%;
+}
+}
+
+.HeaderNavList a:hover {
+  opacity: 0.8;
+}
+
+
 .FirstView {
   background-image: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
   background-size: cover;
   background-position: center;
   padding-top: 100px;
   padding-bottom: 28px;
+}
+
+.FirstView-background {
+  display:none;
+}
+
+@media screen and (max-width:767px) {
+  .FirstView {
+    background-image: none;
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .FirstView-background {
+    display: block;
+    padding-bottom:35px;
+    padding-top: 0;
+  }
 }
 
 section {
@@ -77,10 +205,26 @@ section {
     position: relative;
 }
 
+@media screen and (max-width:767px) {
+  .FirstView_container {
+    position:relative;
+    margin-top: -45vh;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .FirstViewContent {
   width: fit-content;
   margin-bottom:70px;
 }
+
+@media screen and (max-width:767px) {
+  .FirstViewContent {
+    width:100%;
+  }
+}
+
 
 .FirstViewContent_title {
   text-align: center;
@@ -89,8 +233,43 @@ section {
   margin-top: 0;
 }
 
+@media screen and (max-width:767px) {
+  .FirstViewContent_title {
+    font-size: 25px;
+    line-height: 36px;
+    margin-left: calc(((100vw - 100%)/2)*-1);
+    margin-right: calc(((100vw - 100%)/2)*-1);
+  }
+}
+
 .FirstViewContent_images {
   margin-bottom: 25px
+}
+
+@media screen and (max-width:767px) {
+  .FirstViewContent_images {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .circle1 {
+    width:27.5%;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .circle2 {
+    width:40%;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .circle3 {
+    width:27.5%;
+  }
 }
 
 .FirstViewContent_button {
@@ -111,6 +290,10 @@ section {
   
 }
 
+.FirstViewContent a:hover {
+  opacity: 0.8;
+}
+
 .FirstViewCaption {
   color: #a2a2a4;
   font-size:12px;
@@ -127,6 +310,12 @@ section {
   padding :44px 0;
 }
 
+@media screen and (max-width:767px) {
+  .AboutWrapper {
+    padding: 30px 0;
+  }
+}
+
 .About {
   max-width: 1140px;
   padding-left: 50px;
@@ -140,8 +329,21 @@ section {
   
 }
 
+@media screen and (max-width:767px) {
+  .About {
+    flex-direction :column;
+  }
+}
+
 .About_video {
   width: 50%;
+}
+
+@media screen and (max-width:767px) {
+  .About_video {
+    width: 100%;
+    margin-bottom: 16px;
+  }
 }
 
 .About_title {
@@ -149,6 +351,13 @@ section {
   display: flex;
   flex-direction:column;
   color: #fff;
+}
+
+@media screen and (max-width:767px) {
+  .About_title {
+    align-items:center;
+    margin-left: 0;
+  }
 }
 
 .About_title h2 {
